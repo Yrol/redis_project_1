@@ -1,0 +1,44 @@
+* In sets, values will be stored as string
+* Key name can be any string
+
+# Setting key and value ex:1
+set car_1 toyota
+
+# Setting key and value ex:2
+set car_2 12345
+
+# Setting key and value ex:3
+set 1 Nissan
+
+# Setting key and value ex:4
+set ....bigKey...... somevalue
+
+# Setting key and values with spaces ex:5 (will throw an error if quotes are not used)
+set destination "Port Adelaide"
+
+# Setting key and value ex:6
+set true false
+
+# Accessing the value using key (if doesn't exist return null)
+get car_1
+
+# Replacing the existing value using key
+set car_1 Nissan
+
+# Convension of saving a user's name by ID ex:1
+set user:1:name Jake
+
+# Accessing all keys (no pagination)
+keys *
+
+# Accessing keys staring with a specific string (matches string starts with "car")
+keys car*
+
+# Using scan all keys (with pagination) - getting first page
+scan 0
+
+# Using scan to match pattern
+scan 0 MATCH car*
+
+
+

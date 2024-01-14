@@ -1,0 +1,2 @@
+# Checking status (should respond PONG)
+ping
