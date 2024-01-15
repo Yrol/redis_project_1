@@ -1,0 +1,27 @@
+* Expiring keys example scenarios: storing user tokens, when trying to book a movie seat by multiple users - hold the seat for few minutes by storing the status in Redis & etc
+* Replacing the value (set car_1 Isuzu) of a key that already has expiry will also remove the expiry
+
+# Expiring keys using seconds - expiring the key in 10 seconds
+set car_1 toyota ex 10
+
+# Expiring keys using milliseconds - expiring the key in 30000 milliseconds (30 seconds)
+set car_1 Volvo px 30000
+
+# Accessing the time to live (TTL) of a key (keys with no expiration will return -1)
+ttl a
+
+# Extending the expiration of a key (ex: extend by 60 seconds). Works with keys that are already expired
+expire car_1 60
+
+# Expiring keys using a future timestamp
+set car_1 nissan exat 1705401287
+
+# Example of replacing the value of a key that'll result in removing its expiry (if TTL already exists) - commands in order
+set car_1 Volvo px 30000
+set car_1 Isuzu
+
+# Example of replacing the value of a key without removing its expiry (if TTL already exists) - commands in order
+set car_1 Volvo px 30000
+set car_1 Isuzu keepttl
+
+

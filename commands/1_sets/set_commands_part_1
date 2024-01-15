@@ -40,5 +40,13 @@ scan 0
 # Using scan to match pattern
 scan 0 MATCH car*
 
+# Removing a key using del command
+ del car_1
+
+ # Removing all keys
+ flushdb
+
+
+
 
 
