@@ -19,7 +19,7 @@ set destination "Port Adelaide"
 # Setting key and value ex:6
 set true false
 
-# Accessing the value using key (if doesn't exist return null)
+# Accessing the value using key (if doesn't exist return null / nill)
 get car_1
 
 # Replacing the existing value using key
@@ -40,11 +40,14 @@ scan 0
 # Using scan to match pattern
 scan 0 MATCH car*
 
+# Check if key exists (return 1 if exists and return 0 if doesn't exist)
+exists a
+
 # Removing a key using del command
- del car_1
+del car_1
 
  # Removing all keys
- flushdb
+flushdb
 
 
 

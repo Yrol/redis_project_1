@@ -24,4 +24,14 @@ set car_1 Isuzu
 set car_1 Volvo px 30000
 set car_1 Isuzu keepttl
 
+# Using xx - if key is present (ex: update key a if it only present - it'll return nil if not present)
+set a b xx 
+
+# Using nx - if a key isn't present (ex: update key a if its NOT present - it'll return nil if already present)
+set a b nx
+
+# Check if key exists (return 1 if exists and return 0 if doesn't exist)
+exists a
+
+
 
