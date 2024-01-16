@@ -46,7 +46,7 @@ exists a
 # Removing a key using del command
 del car_1
 
- # Removing all keys
+# Removing all keys
 flushdb
 
 

@@ -1,0 +1,40 @@
+* incr and decr can be used for increase and decrease values of integer only
+* Use case for incr and decr: keep track of product visit
+* The command incrbyfloat can be used for increment float values
+
+# Using incr command to increase the value of an existing key by 1 (integer only)
+set a 1
+incr a
+
+# Using the incr command on a non-existing key - this will result in creating a new key value and assign value 1
+incr bb
+get bb
+
+# Using decr command to decrease the value of an existing key by 1 (integer only)
+set a 1
+decr a
+
+# Using the incr command on a non-existing key - this will result in creating a new key value and assign value -1
+incr cc
+get cc
+
+# Using incrby command to increase a value of an integer by a specific value
+set t 1
+incrby t 5
+
+# Using incrby command to decrease a value of an integer by a specific value
+set t 1
+incrby t -5
+
+# Using decrby command to decrease a value of an integer by a specific value (t will become -4)
+set t 1
+decrby t 5
+
+# Using incrbyfloat to increase float values (NOTE we must specify the value to be incremented)
+set dd 1.5
+incrbyfloat dd 1.2
+
+
+# Using incrbyfloat to decrease float values (NOTE we must specify the value to be decremented)
+set dd 1.5
+incrbyfloat dd -0.03

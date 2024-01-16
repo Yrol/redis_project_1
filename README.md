@@ -19,3 +19,10 @@ Access Redis CLI (once inside the Redis container)
 ```
 redis-cli
 ```
+
+### Redis commands location in project
+The `commands` folder consist of all the commands practiced within this project.
+
+
+### Redis commands documentation
+[https://redis.io/commands/](http://www.reddit.com)

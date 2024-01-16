@@ -33,5 +33,3 @@ set a b nx
 # Check if key exists (return 1 if exists and return 0 if doesn't exist)
 exists a
 
-
-
