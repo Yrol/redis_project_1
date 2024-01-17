@@ -1,0 +1,27 @@
+* Hashing allows to store object (groups of fields such as a user) in Redis and individual fields of these objects can be accessed to update.
+
+# Adding a hash set (saving user with ID 1, age 20 and city Sydney)
+hset  user:1 name Sam age 20 city Sydney
+
+# Fetching a single field value of a hash
+hget user:1 name
+
+# Fetching all values only (without keys)
+hvals user:1
+
+# Fetching all keys and values of a hash
+hgetall user:1
+
+# Fetching all keys of a hash
+hkeys user:1
+
+# check if fields exists (return 1 or 0)
+hexists user:1 name
+
+# Removing a specific field
+hdel user:1 name
+
+# Expiring the hash (in 20 seconds)
+expire user:1 20
+
+

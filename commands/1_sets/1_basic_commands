@@ -25,11 +25,14 @@ get car_1
 # Replacing the existing value using key
 set car_1 Nissan
 
-# Convension of saving a user's name by ID ex:1
+# Convention of saving a user's name by ID ex:1
 set user:1:name Jake
 
 # Accessing all keys (no pagination)
 keys *
+
+# Finding the type of key
+type car_1
 
 # Accessing keys staring with a specific string (matches string starts with "car")
 keys car*

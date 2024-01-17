@@ -26,3 +26,6 @@ The `commands` folder consist of all the commands practiced within this project.
 
 ### Redis commands documentation
 [https://redis.io/commands/](http://www.reddit.com)
+
+### Redis cheat sheet
+[https://cheatography.com/tasjaevan/cheat-sheets/redis/](https://cheatography.com/tasjaevan/cheat-sheets/redis/)
