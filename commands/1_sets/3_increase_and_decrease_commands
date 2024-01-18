@@ -26,7 +26,7 @@ incrby t 5
 set t 1
 incrby t -5
 
-# Using decrby command to decrease a value of an integer by a specific value (t will become -4)
+# Using decrby command to decrease a value of an integer by a specific value (t will become -4 )
 set t 1
 decrby t 5
 

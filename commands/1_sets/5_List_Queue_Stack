@@ -1,0 +1,28 @@
+* List: An ordered collection of items
+* List: Similar to linked lists
+* List: can be used as Queue /  Stack. Queue - FIFO. Stack - LIFO
+* Use cases: Redis can be used as message queues.
+
+# Adding items to right hand side / last position of the list
+rpush users sam mike jake
+
+# Adding items to left hand side / first position
+lpush users john
+
+# Accessing a list (from start to end - starting from 0 to the end).
+lrange users 0 -1
+
+# Accessing the nth element of the list using index (accessing the first item of the list)
+lrange user 0 0
+
+# Getting the length of a list
+llen users
+
+# removing the first item of the list
+lpop users
+
+# removing the last item of the list (LIFO - stack behavior)
+rpop users
+
+# removing the first n number of items from the list
+lpop users 2
