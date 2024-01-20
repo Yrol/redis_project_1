@@ -1,0 +1,21 @@
+* An unordered collection of unique items (Strings)
+* Similar to Java Set
+* Use cases: Maintain currently logged in users, Maintain blacklisted IP/user, Set intersection
+
+# Adding a set and items to it
+sadd users sam james mike
+
+# Checking a set (will give the length of the items if exists)
+scard users
+
+# Accessing the values of a set (will output all the values)
+smembers users
+
+# Check if value exist in set (return 0 or 1)
+sismember users mike
+
+# Removing an item from the set (using the value)
+srem users mike
+
+# Randomly remove items (will return the removed value)
+spop users

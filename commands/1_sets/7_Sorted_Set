@@ -1,0 +1,39 @@
+* An ordered collection of unique items
+* Similar to Java Set however each value contains a score (weight) that will be used for sorting
+* When adding an item to a sorted set, both score and the value must be provided
+* Two or more items can have the same score (if this behavior is not ok, can have decimal score to make it unique)
+* Use cases: Priority queue, Top rated movies, frequently visited pages
+
+# Creating a sorted set (with 3 products score being zero)
+zadd products 0 books 0 iphone 0 tv
+
+# Getting the count (cardinality)
+zcard products
+
+# Increase score of an item in the list (will return the increased score on success, 1 in this case)
+zincrby products 1 iphone
+
+# Get all items in order based on their rank (index position) with the score
+zrange products 0 -1 withscores
+
+# Getting the item that has the highest score
+zrange products -1 -1
+zrange products -1 -1 withscores
+
+# Getting the items withing certain range of score (scored 0 to 2)
+zrange products 0 2 withscores
+
+# Getting the items withing certain range of score in reverse order (scored 0 to 2)
+zrange products 0 2 rev withscores
+
+# Getting the rank (index position) of a specific item (will return the rank)
+zrank products iphone
+
+# Getting the score of a specific item on the list
+zscore products books
+
+# Remove / pop item with the highest score - will return the item removed with its score
+zpopmax products
+
+
+
