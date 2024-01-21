@@ -1,0 +1,15 @@
+* Redis is single threaded where the requests are queued and executed one-by-one. 
+* Therefore it could lead to data inconsistencies when try to update a single value from multiple clients (multiple request at the same time).
+* Redis Transactions allow the execution of a group of commands in a single step, they are centered around the commands MULTI, EXEC, DISCARD and WATCH
+* Documentation: https://redis.io/docs/interact/transactions/
+* Watch: https://redis.io/docs/interact/transactions/#watch-explained
+
+# Using the Transactional (watch is asking Redis to perform the transaction only if none of the WATCHed keys were modified when exec is run)
+set user:1:balance 1
+set user:2:balance 0
+watch user:1:balance 1 user:2:balance 0
+multi
+decr user:1:balance
+incr user:2:balance
+exec
+
