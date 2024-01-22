@@ -18,4 +18,4 @@ sismember users mike
 srem users mike
 
 # Randomly remove items (will return the removed value)
-spop users
+spop users 
