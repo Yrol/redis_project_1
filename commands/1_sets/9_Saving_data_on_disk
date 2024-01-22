@@ -1,0 +1,20 @@
+* Saving data to a file (data dump)
+* This crucial as it'll help to persist data even after restarting redis server.
+* Use cases: When it's required to start the Redis with the predefined state
+
+# Saving data
+Step 1: Open a new terminal to access the Redis data directory (/data). In this case using Docker
+docker exec -it redis bash
+
+Step 2: Check the Redis data directory
+ls -a
+
+Step 3: Add / set new data in Redis (in Redis cli)
+set user:1:balance 1
+set user:2:balance 0
+
+Step 4: Saving data (in Redis cli)
+bgsave
+
+Step 5: Checking the Redis saved data in the /data dir
+ls -a
